@@ -14,7 +14,6 @@ public class Principal {
 	
 		        //Instanciar um onjeto da classe JFRAME
 				JFrame formulario = new JFrame();
-				
 				formulario.setVisible(true);
 				formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				formulario.setSize(400, 200);
@@ -22,7 +21,6 @@ public class Principal {
 			    formulario.setTitle("Adicione seus dados");
 				formulario.setLayout(null);
 			
-
 
 				//Rotulo
 					JLabel rotulo = new JLabel();
