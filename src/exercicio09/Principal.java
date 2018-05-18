@@ -1,10 +1,8 @@
-package exercicio08;
+package exercicio09;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -13,13 +11,15 @@ import javax.swing.JTextField;
 public class Principal {
 
 	public static void main(String[] args) {
-	
-		JFrame formulario = new JFrame("Calculadora Simples");
+		
+		//JFrame
+		JFrame formulario = new JFrame("Qual o maior numero");
 		formulario.setSize(300, 200);
 		formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		formulario.setLocationRelativeTo(null);
 		formulario.setLayout(null);
 		
+		//JLabel
 		JLabel numero1 = new JLabel("Informe o primeiro numero:");
 		numero1.setBounds(10, 10, 160, 20);
 		
@@ -32,62 +32,44 @@ public class Principal {
 		JTextField campoNumero2 = new JTextField();
 		campoNumero2.setBounds(170, 40, 30 , 20);
 		
-		JLabel operacao = new JLabel("Informe a operação:");
-		operacao.setBounds(10, 70, 160, 20);
+		JLabel numero3 = new JLabel("Informe o terceiro numero:");
+		numero3.setBounds(10, 70, 160, 20);
 		
+		JTextField campoNumero3 = new JTextField();
+		campoNumero3.setBounds(170, 70, 30 , 20);
 		
-		JComboBox<String> combo = new JComboBox<>();
-		combo.setBounds(170, 70, 100, 30);
-		combo.addItem("Soma");
-		combo.addItem("Subtração");
-		combo.addItem("Divisão");
-		combo.addItem("Multiplicação");
-		
-		JButton botao = new JButton("Confirmar conta");
+		JButton botao = new JButton("Confirmar");
 		botao.setBounds(75, 110, 130, 20);
 		
 		botao.addActionListener(new ActionListener() {
 			
-		
+			
 			public void actionPerformed(ActionEvent e) {
 				
 				int n1 = Integer.parseInt(campoNumero1.getText());
 				int n2 = Integer.parseInt(campoNumero2.getText());
-				double conta = 0;
-			
-			if(combo.getSelectedItem().equals("Soma")) {
-				conta = n1+n2;
-				JOptionPane.showMessageDialog(null, n1+" + "+n2+" = "+conta);
+				int n3 = Integer.parseInt(campoNumero3.getText());
+				
+			if((n1 < n2) && (n1 < n3)) {
+				JOptionPane.showMessageDialog(null, "O menor número é "+n1);
 			}
 				
-			if(combo.getSelectedItem().equals("Subtração")) {
-				conta = n1-n2;
-				JOptionPane.showMessageDialog(null, n1+" - "+n2+" = "+conta);
+			if((n2 < n1) && (n2 < n3)) {
+				JOptionPane.showMessageDialog(null, "O menor número é "+n2);
 			}
 			
-			if(combo.getSelectedItem().equals("Divisão")) {
-				conta = n1/n2;
-				JOptionPane.showMessageDialog(null, n1+" / "+n2+" = "+conta);
-			}
-			
-			if(combo.getSelectedItem().equals("Multiplicação")) {
-				conta = n1*n2;
-				JOptionPane.showMessageDialog(null, n1+" X "+n2+" = "+conta);
+			if((n3 < n1) && (n3 < n2)) {
+				JOptionPane.showMessageDialog(null, "O menor número é "+n3);
 			}
 			
 			campoNumero1.setText("");
 			campoNumero2.setText("");
+			campoNumero3.setText("");
 			campoNumero1.requestFocus();
 			
-			
-			
-			
+				
 			}
 		});
-		
-		
-		
-		
 		
 		
 		
@@ -96,8 +78,8 @@ public class Principal {
 		formulario.add(campoNumero1);
 		formulario.add(numero2);
 		formulario.add(campoNumero2);
-		formulario.add(operacao);
-		formulario.add(combo);
+		formulario.add(numero3);
+		formulario.add(campoNumero3);
 		formulario.add(botao);
 		
 		
@@ -106,5 +88,3 @@ public class Principal {
 	}
 
 }
-
-
