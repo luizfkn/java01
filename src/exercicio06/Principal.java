@@ -11,7 +11,7 @@ import javax.swing.JTextField;
 public class Principal {
 
 	public static void main(String[] args) {
-		
+		//Instanciar um onjeto da classe JFRAME
 	JFrame formulario = new JFrame();
 	formulario.setSize(200, 150);
 	formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
