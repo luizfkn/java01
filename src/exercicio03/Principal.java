@@ -2,7 +2,6 @@ package exercicio03;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -13,80 +12,107 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		//Instanciar um onjeto da classe JFRAME
-		JFrame formulario = new JFrame();
-		formulario.setVisible(true);
+		JFrame formulario = new JFrame("Médias e Situação");
+		formulario.setSize(250, 200);
 		formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		formulario.setSize(500, 300);
 		formulario.setLocationRelativeTo(null);
-	    formulario.setTitle("Obter dados");
-	    formulario.setLayout(null);
+		formulario.setLayout(null);
 		
-		//Obter notas do aluno
-		JLabel nota = new JLabel();
-        nota.setText("Nota");
-		nota.setBounds(30, 30, 130, 20);
+		JLabel nota1 = new JLabel("Informe a 1º nota: ");
+		nota1.setBounds(10, 10, 150, 20);
+	
+		JTextField campoNota1 = new JTextField();
+		campoNota1.setBounds(120, 10, 50, 20);
 		
-		JLabel nota1 = new JLabel();
-		nota1.setText("Nota");
-		nota1.setBounds(30, 60, 130, 20);
+		JLabel nota2 = new JLabel("Informe a 2º nota: ");
+		nota2.setBounds(10, 40, 150, 20);
+	
+		JTextField campoNota2 = new JTextField();
+		campoNota2.setBounds(120, 40, 50, 20);
 		
-		JLabel nota2 = new JLabel();
-		nota2.setText("Nota");
-		nota2.setBounds(30, 90, 130, 30);
+		JLabel nota3 = new JLabel("Informe a 3º nota: ");
+		nota3.setBounds(10, 70, 150, 20);
+	
+		JTextField campoNota3 = new JTextField();
+		campoNota3.setBounds(120, 70, 50, 20);
 		
-		JLabel nota3 = new JLabel();
-		nota3.setText("Nota");
-		nota3.setBounds(30, 120, 130, 30);
+		JLabel nota4 = new JLabel("Informe a 3º nota: ");
+		nota4.setBounds(10, 100, 150, 20);
+	
+		JTextField campoNota4 = new JTextField();
+		campoNota4.setBounds(120, 100, 50, 20);
 		
-		//Campo
-		JTextField campo = new JTextField();
-		campo.setBounds(150, 30, 180, 20);
+		JButton botao = new JButton("Confirmar Notas");
+		botao.setBounds(27, 130, 180, 20);
 		
-		JTextField campo1 = new JTextField();
-		campo1.setBounds(150, 60, 180, 20);
-		
-		JTextField campo2 = new JTextField();
-		campo2.setBounds(150, 90, 180, 20);
-		
-		JTextField campo3 = new JTextField();
-		campo3.setBounds(150, 120, 180, 20);
-		
-		//Criando butão
-		JButton botao = new JButton();
-		botao.setText("Calcular ");
-		botao.setBounds(150, 150, 180, 20);
-		
-		//Adicionando ação
 		botao.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				double nota = Double.parseDouble(campo.getText());
-				double nota1 = Double.parseDouble(campo1.getText());
-				double nota2 = Double.parseDouble(campo2.getText());
-				double nota3 = Double.parseDouble(campo3.getText());
+				double n1 = Double.parseDouble(campoNota1.getText());
+				double n2 = Double.parseDouble(campoNota2.getText());
+				double n3 = Double.parseDouble(campoNota3.getText());
+				double n4 = Double.parseDouble(campoNota4.getText());
 				
-				if ( nota < nota2)
+				if((n1 < 0) || (n1 > 10) || (n2 < 0) || (n2 > 10) || (n3 < 0) || (n3 > 10) || (n4 < 0) || (n4 > 10)){
+					JOptionPane.showMessageDialog(null, "Nota invalida! (Deve ser entre 0 e 10)");
+				}
 				
+				
+				double media = (n1+n2+n3+n4)/4;
+				
+				String situacao = "";
+				
+				if(media >= 7){
+					situacao = "Aprovado";
+				}
+				if(media < 7){
+					situacao = "Em exame";
+				}
+				if(media < 5){
+					situacao = "Reprovado";
+				}
+				
+				
+				String texto = "*****NOTAS E MEDIAS*****\n";
+					   texto += "1º Nota: "+campoNota1.getText()+"\n";
+					   texto += "2º Nota: "+campoNota2.getText()+"\n";
+					   texto += "3º Nota: "+campoNota3.getText()+"\n";
+					   texto += "4º Nota: "+campoNota4.getText()+"\n";
+					   texto += "Media: "+media;
+					   texto += "\nSituação: "+situacao;
+				
+				if((n1 > 0) && (n1 <= 10) && (n2 > 0) && (n2 <= 10) && (n3 > 0) && (n3 <= 10) && (n4 > 0) && (n4 <= 10)){
+				JOptionPane.showMessageDialog(null, texto);
+				}
+				
+				campoNota1.setText("");
+				campoNota2.setText("");
+				campoNota3.setText("");
+				campoNota4.setText("");
+				campoNota1.requestFocus();
 			}
 		});
 		
-		//Adicionar botão no formulário
-		formulario.add(botao);
-		formulario.add(nota);
-		formulario.add(nota1);
-		formulario.add(nota2);
-		formulario.add(nota3);
-		formulario.add(campo);
-		formulario.add(campo1);
-		formulario.add(campo2);
-		formulario.add(campo3);
 		
-		//Exibir o formulario e seus componentes
-		formulario.repaint();
+		
+		
+		
+		formulario.add(nota1);
+		formulario.add(campoNota1);
+		formulario.add(nota2);
+		formulario.add(campoNota2);
+		formulario.add(nota3);
+		formulario.add(campoNota3);
+		formulario.add(nota4);
+		formulario.add(campoNota4);
+		formulario.add(botao);
+		
+		
 		formulario.setVisible(true);
+		
+
 	}
 
 }
