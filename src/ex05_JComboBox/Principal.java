@@ -1,4 +1,4 @@
-package ex5_JComboBox;
+package ex05_JComboBox;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

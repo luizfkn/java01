@@ -1,4 +1,4 @@
-package ex2_JLabel;
+package ex02_JLabel;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;

@@ -1,4 +1,4 @@
-package ex1_JFrame;
+package ex01_JFrame;
 
 import javax.swing.JFrame;
 

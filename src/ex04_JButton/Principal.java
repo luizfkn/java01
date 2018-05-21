@@ -1,4 +1,4 @@
-package ex4_JButton;
+package ex04_JButton;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
