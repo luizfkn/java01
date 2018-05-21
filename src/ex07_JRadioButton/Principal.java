@@ -1,4 +1,4 @@
-package ex7_JRadioButton;
+package ex07_JRadioButton;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

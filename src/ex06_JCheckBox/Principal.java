@@ -1,4 +1,4 @@
-package ex6_JCheckBox;
+package ex06_JCheckBox;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

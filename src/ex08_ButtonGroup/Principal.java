@@ -1,4 +1,4 @@
-package ex8_ButtonGroup;
+package ex08_ButtonGroup;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
