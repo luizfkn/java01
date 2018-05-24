@@ -13,6 +13,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
+		//JFrame
 		JFrame formulario = new JFrame("Velocidade Máxima");
 		formulario.setSize(300, 200);
 		formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
