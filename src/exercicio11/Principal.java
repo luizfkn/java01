@@ -13,7 +13,6 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		//JFrame
 		JFrame formulario = new JFrame("Média");
 		formulario.setSize(250, 250);
 		formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

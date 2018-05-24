@@ -14,7 +14,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		//JFrame
+
 		JFrame formulario = new JFrame("Lanchonete");
 		formulario.setSize(400, 150);
 		formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

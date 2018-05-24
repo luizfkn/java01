@@ -15,7 +15,6 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		//JFrame
 		JFrame formulario = new JFrame("Hotel");
 		formulario.setSize(300, 140);
 		formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
