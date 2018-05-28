@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 
 public class Principal {
 
+	//JFRAME
 	public static void main(String[] args) {
 		
 	JFrame formulario = new JFrame("Velocidade Máxima");
