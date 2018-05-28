@@ -13,7 +13,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
-		//JFRAME
+		//JFRAMEe
 		JFrame formulario = new JFrame("Antecessor e Sucessor");
 		formulario.setSize(300, 120);
 		formulario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

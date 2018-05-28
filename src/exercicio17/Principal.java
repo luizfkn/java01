@@ -11,7 +11,7 @@ import javax.swing.JTextField;
 
 public class Principal {
 
-	//JFRAME
+	//JFRAMEE
 	public static void main(String[] args) {
 
 		JFrame formulario = new JFrame("Lanchonete");
